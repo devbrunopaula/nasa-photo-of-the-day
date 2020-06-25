@@ -7,7 +7,7 @@ import {Modal, Button, Container, Row, Col} from 'react-bootstrap'
 
 function DatePicker(props) {
 
-const [value, onChange] = useState(new Date());
+const [value ] = useState(new Date());
 const [show, setShow] = useState(false);
   
 // Handles
@@ -18,8 +18,6 @@ const handleChange = (e) => {
     const userDate = dateFormat(e, 'isoDate')
     props.setDate(userDate)
 }
-
-const formatDate = dateFormat(value, 'shortDate')
 
 
 return (

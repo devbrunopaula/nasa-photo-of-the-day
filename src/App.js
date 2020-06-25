@@ -29,38 +29,35 @@ function App() {
  
 const todaysDate = moment().format('YYYY-MM-DD');
   
+const theme = {
+  primary: 'blue',
+  data: data
+}
 
 
+// Nasa API Fetch
+const fetchNasaData = async () => {
 
-  // Nasa API Fetch
-  const fetchNasaData = async () => {
-   const userDate = (date === "") ? todaysDate : date
-    try {
-      setLoading(true)
-      const fetchedData = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=uB1eBXjQkWTdqlIoGrZK1hHU87mAhq6u4mEipFbm&date=${userDate}`)
-      const response =  fetchedData.data
-      setData(response)
-      setLoading(false)
-     
-     
-    } catch (error) {
-      console.log(error)
-      setLoading(true)
-    }
- }
+  const userDate = (date === "") ? todaysDate : date
+  try {
+    setLoading(true)
+    const fetchedData = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=uB1eBXjQkWTdqlIoGrZK1hHU87mAhq6u4mEipFbm&date=${userDate}`)
+    const response =  fetchedData.data
+    setData(response)
+    setLoading(false)
+    
+  } catch (error) {
+    console.log(error)
+    setLoading(true)
+  }
+}
 
 
 
 //  UseEffect
-  useEffect(() => {
-    fetchNasaData()
-  },[date])
-  
-  const theme = {
-    primary: 'blue',
-    data: data
-
-  }
+useEffect(() => {
+  fetchNasaData()
+},[date])
 
 
 
