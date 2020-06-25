@@ -1,0 +1,31 @@
+
+
+.react-calendar {
+  border: none;
+  width: 100%;
+}
+
+.date-button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.date-button:hover {
+  background-color: #363636;
+  box-shadow: 0px 15px 20px rgba(79, 80, 80, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
