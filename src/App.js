@@ -64,7 +64,7 @@ useEffect(() => {
   return (
     <ThemeProvider theme={theme}>
       <Navigation/>
-      {loading ? <LoadingCenter><Spinner animation="border" size="lg" variant="secondary" /> LOADING...</LoadingCenter> : <Hero data={ data } date={date} setDate={setDate}/>}
+      {loading ? <LoadingCenter><Spinner animation="border" size="lg" variant="secondary" />LOADING...</LoadingCenter> : <Hero data={ data } date={date} setDate={setDate}/>}
     </ThemeProvider>
   );
 }
